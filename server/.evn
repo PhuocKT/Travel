@@ -1,0 +1,2 @@
+MONGO_URI=mongodb+srv://hoanphuoc20021208:abcdefg@<cluster>.mongodb.net/travelDB?retryWrites=true&w=majority
+PORT=5000

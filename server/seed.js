@@ -1,0 +1,97 @@
+const mongoose = require("mongoose");
+const Destination = require("./models/Destination");
+
+mongoose.connect("mongodb+srv://hoanphuoc20021208:abcdefg@createcluster.d9tdpy9.mongodb.net/travelDB?retryWrites=true&w=majority")
+
+    .then(async () => {
+        console.log("Seeding data...");
+
+        await Destination.deleteMany(); 
+        await Destination.insertMany([
+        {
+                    id: 1,
+                    imgSrc: "img1.jpg",
+                    destTitle: 'Bà Nà Hills',
+                    location: 'Đà Nẵng, Việt Nam',
+                    grade: 'CẢNH QUAN ĐẸP',
+                    fees: '$30',
+                    description: 'Bà Nà Hills là khu du lịch nổi tiếng với khí hậu mát mẻ, công trình kiến trúc châu Âu và Cầu Vàng nổi bật giữa núi rừng.'
+                },
+                {
+                    id: 2,
+                    imgSrc: "img2.jpg",
+                    destTitle: 'Ngũ Hành Sơn',
+                    location: 'Đà Nẵng, Việt Nam',
+                    grade: 'DU LỊCH TÂM LINH',
+                    fees: '$10',
+                    description: 'Ngũ Hành Sơn gồm 5 ngọn núi đá vôi tuyệt đẹp, nổi tiếng với các hang động và chùa chiền linh thiêng.'
+                },
+                {
+                    id: 3,
+                    imgSrc: "img3.jpg",
+                    destTitle: 'Biển Mỹ Khê',
+                    location: 'Đà Nẵng, Việt Nam',
+                    grade: 'NGHỈ DƯỠNG BIỂN',
+                    fees: 'Free',
+                    description: 'Biển Mỹ Khê là một trong những bãi biển đẹp nhất hành tinh với cát trắng mịn, sóng êm và nước trong xanh.'
+                },
+                {
+                    id: 4,
+                    imgSrc: "img4.jpg",
+                    destTitle: 'Cầu Rồng',
+                    location: 'Đà Nẵng, Việt Nam',
+                    grade: 'KIẾN TRÚC ĐỘC ĐÁO',
+                    fees: 'Free',
+                    description: 'Cầu Rồng là biểu tượng hiện đại của Đà Nẵng, nổi bật với khả năng phun lửa và phun nước vào cuối tuần.'
+                },
+                {
+                    id: 5,
+                    imgSrc: "img5.jpg",
+                    destTitle: 'Công viên Châu Á',
+                    location: 'Đà Nẵng, Việt Nam',
+                    grade: 'GIẢI TRÍ GIA ĐÌNH',
+                    fees: '$15',
+                    description: 'Công viên Châu Á (Asia Park) là tổ hợp vui chơi giải trí với nhiều trò chơi cảm giác mạnh và vòng quay Sun Wheel.'
+                },
+                {
+                    id: 6,
+                    imgSrc: "img6.jpg",
+                    destTitle: 'Bãi Rạng',
+                    location: 'Đà Nẵng, Việt Nam',
+                    grade: 'THIÊN NHIÊN HOANG SƠ',
+                    fees: 'Free',
+                    description: 'Bãi Rạng là bãi biển hoang sơ nằm gần bán đảo Sơn Trà, lý tưởng để tắm biển và cắm trại.'
+                },
+                {
+                    id: 7,
+                    imgSrc: "img7.jpg",
+                    destTitle: 'Bán đảo Sơn Trà',
+                    location: 'Đà Nẵng, Việt Nam',
+                    grade: 'KHÁM PHÁ THIÊN NHIÊN',
+                    fees: 'Free',
+                    description: 'Sơn Trà được mệnh danh là “lá phổi xanh” của Đà Nẵng với cảnh quan tuyệt đẹp và đa dạng sinh học.'
+                },
+                {
+                    id: 8,
+                    imgSrc: "img8.jpg",
+                    destTitle: 'Chùa Linh Ứng',
+                    location: 'Đà Nẵng, Việt Nam',
+                    grade: 'TÂM LINH & TỊNH TÂM',
+                    fees: 'Free',
+                    description: 'Chùa Linh Ứng nằm trên bán đảo Sơn Trà, nổi bật với tượng Phật Quan Âm cao nhất Việt Nam hướng ra biển.'
+                },
+                {
+                    id: 9,
+                    imgSrc: "img9.jpg",
+                    destTitle: 'Bảo tàng điêu khắc Chăm',
+                    location: 'Đà Nẵng, Việt Nam',
+                    grade: 'LỊCH SỬ & VĂN HÓA',
+                    fees: '$5',
+                    description: 'Bảo tàng điêu khắc Chăm lưu giữ hàng trăm hiện vật quý giá từ nền văn hóa Chăm Pa cổ xưa.'
+                }
+        ]);
+
+        console.log("✅ Seeding thành công!");
+        process.exit();
+    })
+    .catch(err => console.log("❌ Lỗi seeding:", err));
