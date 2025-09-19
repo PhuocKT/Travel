@@ -1,0 +1,160 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+  --WhiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+}
+
+.introSection {
+  padding: 120px 0 0;
+  background: #f8f9fa;
+}
+
+.introSection .introContent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.introSection .introContent .introImg {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.introSection .introContent .introImg img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.introSection .introContent .introText {
+  flex: 1;
+  min-width: 280px;
+  font-size: 1.2rem;
+  color: var(--textColor);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.introSection .introContent .introText .typed-cursor {
+  color: var(--PrimaryColor);
+  font-weight: bold;
+}
+
+.missionSection {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.missionSection h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--textColor);
+}
+
+.missionSection p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--textColor);
+}
+
+.missionSection .missionImg {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.missionSection .missionImg img {
+  flex: 1;
+  max-width: 30%;
+  padding: 10px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.whyChooseUs {
+  padding: 80px 20px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.whyChooseUs h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.whyChooseUs .reasons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.whyChooseUs .reasons .reason {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.whyChooseUs .reasons .reason i {
+  font-size: 2rem;
+  color: var(--textColor);
+  margin-bottom: 15px;
+}
+
+.whyChooseUs .reasons .reason h3 {
+  margin-bottom: 10px;
+}
+
+.whyChooseUs .reasons .reason p {
+  color: #555;
+}
+
+.ctaSection {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--gradientColor);
+  color: #fff;
+}
+
+.ctaSection h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.ctaSection .ctaBtn {
+  background: #fff;
+  color: var(--textColor);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ctaSection .ctaBtn:hover {
+  background: var(--PrimaryColor);
+  color: var(--WhiteColor);
+}
+
+/*# sourceMappingURL=about.css.map */
